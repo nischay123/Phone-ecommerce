@@ -9,19 +9,21 @@ export default function Productlist() {
 
 
     return (
-        <ProductConsumer >
-            { (val) => {
-                return val.Data.map(ele =>{
-                
-                return <Product key={ele.id} item={ele}/>
-                   
-                })
+        <div className='container'>
+            <div class="row">
+                <ProductConsumer >
+                    {(val) => {
+                        return val.Data.map(ele => {
+                            return <Product key={ele.id} item={ele} />
+                        })
+                    }
 
-            }
-
-            }
+                    }
 
 
-        </ProductConsumer>
+                </ProductConsumer>
+
+            </div>
+        </div>
     )
 }

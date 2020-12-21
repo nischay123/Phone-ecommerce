@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom'
-import { productConsumer, ProductProvider } from './Context'
+import {  ProductProvider } from './Context'
 ReactDOM.render(
   <React.StrictMode>
     <ProductProvider >

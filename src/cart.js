@@ -5,8 +5,10 @@ import { ProductConsumer } from './Context'
 export default function Cart() {
     return (
         <React.Fragment>
+            
             <ProductConsumer>
                 {val => {
+                
                     const { Cart } = val;
 
                     return Cart.map(ele => {
@@ -15,7 +17,13 @@ export default function Cart() {
                     })
                 }}
             </ProductConsumer>
-            <button> clear items </button>
+            <ProductConsumer>
+                {val => {
+                    return <button className='btn btn-primary' onClick={val.clrCart}> Clear items </button>
+                }}
+
+            </ProductConsumer>
+
         </React.Fragment>
 
     )

@@ -16,7 +16,7 @@ export default function Modal() {
                             <div className="container">
                                 <div className='row'>
                                     <div id="modal" className="col-8 mx-auto col-md-6 col-lg-4 text-center pb-5">
-                                        <h5>woriking</h5>
+                    <h5>{modalDetail.title}</h5>
                                         <h6>price :${modalDetail.price}</h6>
                                         <img className='col-10' src={modalDetail.img}></img>
                                         <Link to='/'>

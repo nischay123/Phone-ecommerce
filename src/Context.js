@@ -50,7 +50,9 @@ export default function ProductProvider(props) {
         temp[index] = product;
         return setCart(temp);
     }
-
+    const clrCart =()=>{
+        setCart([]);
+    }
     const removeItem = (id)=>{
         const product = getProductById(id);
         const index = cart.indexOf(product);
@@ -68,6 +70,7 @@ export default function ProductProvider(props) {
 
             const temp = [...data];
             setModal(!modal);
+            setModaldetail(product);
             const index = data.indexOf(product);
             product.incart = true;
             product.total = product.price;
@@ -100,7 +103,8 @@ export default function ProductProvider(props) {
                 Cart: cart,
                 increaseCount: increaseCount,
                 decCount: decCount,
-                removeItem :removeItem
+                removeItem :removeItem,
+                clrCart:clrCart
             }
         } >
             {props.children}

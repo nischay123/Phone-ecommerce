@@ -18,7 +18,6 @@ function App() {
         <Route path='/detail' component={Detail} />
         <Route path='/' component={Productlist} />
       </Switch>
-
       <Modal />
     </React.Fragment>
   );

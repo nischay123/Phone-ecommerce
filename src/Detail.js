@@ -9,7 +9,7 @@ export default function detail() {
             <ProductConsumer>
 
                 {(val) => {
-                    const { id, title, img, price, company, info, inCart } = val.Details;
+                    const { id, title, img, price, company, info, incart } = val.Details;
                     return (
                         <div className="container mt-5">
                             <div className='row'>
@@ -25,9 +25,13 @@ export default function detail() {
                                     <p class="text-muted">
                                         Price : ${price}
                                     </p>
-                                    <button className="btn btn-outline-primary mx-auto" > {!inCart ? <AiOutlineShoppingCart /> : "Added to cart"}</button>
+
+                                    <button className="btn btn-primary" disabled={!incart ? false : true}
+                                        onClick={() => { val.handleCart(id) }}>
+                                        {!incart ? <AiOutlineShoppingCart /> : "Add cart"}
+                                    </button>
                                     <Link to='/'>
-                                    <button className="btn btn-primary mx-auto" > HOME </button>
+                                        <button className="btn btn-primary mx-auto" > HOME </button>
                                     </Link>
                                 </div>
 
