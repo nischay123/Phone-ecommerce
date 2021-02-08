@@ -80,9 +80,6 @@ export default function ProductProvider(props) {
             setData(temp);
             console.log(tempcart);
         }
-
-
-
     }, [isState]);
 
     const handleCart = (id) => {

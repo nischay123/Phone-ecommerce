@@ -38,8 +38,6 @@ export default function detail() {
 
                             </div>
                         </div>
-
-
                     )
                 }}
             </ProductConsumer>

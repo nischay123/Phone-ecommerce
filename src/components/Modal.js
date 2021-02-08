@@ -61,4 +61,10 @@ const ModalWrapper = styled.div`
     #modal{
          background : white;
     }
+    h6 , h5 {
+        margin : 10px;
+    }
+    img{
+        margin-bottom : 10px;
+    }
 `

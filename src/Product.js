@@ -18,7 +18,7 @@ export default function Product(props) {
                                 <div class="card-body">
                                     <button className="btn btn-primary" disabled={!props.item.incart ? false : true}
                                         onClick={() => { val.handleCart(props.item.id) }}>
-                                        {!props.item.incart ? <AiOutlineShoppingCart /> : "Add cart"}
+                                        {!props.item.incart ? <AiOutlineShoppingCart /> : "Added in  cart"}
                                     </button>
                                     <div className="card-footer d-flex justify-content-between">
                                         <p> {props.item.title}</p>

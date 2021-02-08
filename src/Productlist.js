@@ -7,7 +7,6 @@ import { ProductConsumer } from './Context'
 export default function Productlist() {
 
 
-
     return (
         <div className='container'>
             <div class="row">
